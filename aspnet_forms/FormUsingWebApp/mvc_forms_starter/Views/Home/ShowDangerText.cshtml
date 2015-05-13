@@ -1,0 +1,16 @@
+﻿@model dynamic
+
+@{
+	ViewBag.Title = "title";
+}
+
+<h2>Danger view</h2>
+
+The message is:<br/>
+@Html.Raw(ViewBag.Text)
+
+
+<div class="mdd_toolbar"></div>
+<textarea cols=50 rows=10 class="mdd_editor"></textarea>
+<div class="mdd_resizer"></div>
+<div class="mdd_preview"></div>

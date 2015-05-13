@@ -1,0 +1,33 @@
+﻿@model CreateBookViewModel
+@{
+    ViewBag.Title = "AddBook";
+}
+
+
+<h2>Add Book</h2>
+
+<div>
+	@using (Html.BeginForm())
+	{
+		@Html.ValidationSummary()
+		<div>
+			<span>Title:</span>
+			@Html.TextBoxFor(m => m.Name, null, new {@class="form-control"})
+		</div>
+		<div>
+			<span>Url:</span>
+			@Html.TextBoxFor(m => m.ImageUrl, null, new { @class = "form-control" })
+		</div>
+		<div>
+			<span>Price:</span>
+			@Html.TextBoxFor(m => m.Price, null, new { @class = "form-control" })
+		</div>
+		<div>
+			<span>Category ID:</span>
+			@Html.DropDownListFor(m => m.CategoryId, Model.CategoriesList, new { @class = "form-control" })
+			@*@Html.TextBox("categoryid", null, new { @class = "form-control" })*@
+		</div>
+
+		<button class="btn btn-danger" >Create book</button>
+	}
+</div>

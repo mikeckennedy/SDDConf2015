@@ -25,13 +25,28 @@ namespace SecurityAndBinding.Controllers
 			return View(WebUser.Current);
 		}
 
+		// hackable
+		//[HttpPost]
+		//public ActionResult Edit(object ignoreHereToCompile)
+		//{
+		//	if (!TryUpdateModel(WebUser.Current))
+		//	{
+		//		return View(WebUser.Current);
+		//	}
+
+		//	return Redirect("/");
+		//}
+
 		[HttpPost]
-		public ActionResult Edit(object ignoreHereToCompile)
+		public ActionResult Edit([Bind(Exclude = "IsAdmin")] WebUser user)
 		{
-			if (!TryUpdateModel(WebUser.Current))
+			if (!ModelState.IsValid)
 			{
 				return View(WebUser.Current);
 			}
+
+			WebUser.Current.Email = user.Email;
+			WebUser.Current.Name = user.Name;
 
 			return Redirect("/");
 		}

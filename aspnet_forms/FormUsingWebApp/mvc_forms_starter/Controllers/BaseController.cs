@@ -10,5 +10,11 @@ namespace mvc_forms_starter.Controllers
 	public class BaseController : Controller
 	{
 		protected Repository repository = Repository.Create();
+
+		protected override void Dispose(bool disposing)
+		{
+			//repository.Dispose();
+			base.Dispose(disposing);
+		}
 	}
 }

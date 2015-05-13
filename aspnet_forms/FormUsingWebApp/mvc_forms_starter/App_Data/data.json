@@ -39,6 +39,22 @@
       "Price": 2.0,
       "CategoryId": 2,
       "Comments": []
+    },
+    {
+      "Id": 4,
+      "Name": "A real book!",
+      "ImageUrl": "http://www.elistmania.com/images/articles/117/Original/LOLCODE.jpg",
+      "Price": 1.99,
+      "CategoryId": 3,
+      "Comments": []
+    },
+    {
+      "Id": 5,
+      "Name": null,
+      "ImageUrl": null,
+      "Price": 0.0,
+      "CategoryId": 1,
+      "Comments": []
     }
   ],
   "Categories": [

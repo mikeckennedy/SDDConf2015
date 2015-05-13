@@ -1,0 +1,14 @@
+﻿@model CategoryViewModel
+@{
+    ViewBag.Title = "Show";
+}
+
+<h2>Category: @Model.Category.Name</h2>
+
+@foreach (var b in Model.Books)
+{
+	<div>
+		<a href="/books/show/@b.Id">@b.Name</a>
+	</div>
+} 
+

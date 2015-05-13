@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using mvc_forms_starter.App_Start;
 using mvc_forms_starter.core;
 using mvc_forms_starter.core.Models;
 
@@ -18,6 +19,7 @@ namespace mvc_forms_starter
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+			AutomapperConfig.Configure();
 
 	        CreateSampleData();
         }
