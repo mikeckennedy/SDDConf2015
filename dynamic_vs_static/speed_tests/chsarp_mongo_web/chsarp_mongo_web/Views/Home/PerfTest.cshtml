@@ -1,0 +1,19 @@
+﻿@using chsarp_mongo_web.Mongo
+
+@{
+    ViewBag.Title = "PerfTest";
+	Book book = ViewBag.Book;
+}
+
+<h2>Perf Test</h2>
+
+<div>
+	There a total of @(ViewBag.Count.ToString("N0")) books.
+</div>
+<div>
+	A searched book is:
+
+	Title: @book.Title<br/>
+	Published: @book.Published<br/>
+</div>
+
