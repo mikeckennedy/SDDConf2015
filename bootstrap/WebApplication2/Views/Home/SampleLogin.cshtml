@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "SampleLogin";
+	Layout = null;
+}
+
+<style>
+	#login-area {
+		width: 400px;
+		background: lightblue;
+		margin-right: auto;
+		margin-left: auto;
+		border: 1px solid #777;
+		padding: 20px;
+		border-radius: 5px;
+		line-height: 1.5em;
+		margin-top: 3em;
+	}
+
+	#login-area h2 {
+		margin-top: 0px;
+		text-align:center;
+	}
+
+	#login-area div {
+		margin-bottom: 1.5em;
+	}
+
+	body {
+		background-color: #ddd;
+	}
+</style>
+
+
+<html>
+
+<head>
+	<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+<div id="login-area">
+
+	<h2>Big Company Login</h2>
+
+	@using (Html.BeginForm())
+	{
+		<div>
+			<input
+					required
+				   type="email" class="form-control" placeholder=" email" />
+		</div>
+		<div>
+			<input required
+				   type="password" class="form-control" placeholder="password" />
+		</div>
+		<div>
+			<button class="btn btn-danger">Login</button>
+		</div>
+	}
+
+</div>
+
+</body>
+
+</html>
+
