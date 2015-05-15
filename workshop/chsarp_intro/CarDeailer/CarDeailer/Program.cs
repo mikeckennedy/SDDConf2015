@@ -12,7 +12,7 @@ namespace CarDeailer
 	{
 		static void Main(string[] args)
 		{
-			//RefreshSchema();
+			RefreshSchema();
 			//AddData();
 			
 			QueryData();
@@ -23,6 +23,16 @@ namespace CarDeailer
 		private static void Projection()
 		{
 			var mongo = new Mongo();
+			
+			//mongo.Db.GridFS.Upload("/car/27/thumbnail.png", "data");
+
+			//if (mongo.Db.GridFS.Exists("/car/27/thumbnail.png"))
+			//{
+			//	return "/images/gray_car.png";
+			//}
+
+			//return new FileResult("thumb27.png", mongo.Db.GridFS.Download("/car/27/thumbnail.png"), "img/png")
+
 			var query = Query<Car>.Where(c => c.History.Any());
 			var data = mongo.CarsCollection
 				.Find(query)

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,6 +36,9 @@ namespace CarDeailer
 
 		public string Model { get; set; }
 		public string Type { get; set; }
+
+		//public float Price { get; set; }
+		public int IntPrice { get; set; }
 		
 		[BsonIgnoreIfNull]
 		public Color Color { get; set; }
@@ -48,6 +52,7 @@ namespace CarDeailer
 		public Car()
 		{
 			this.History = new List<WorkHistory>();
+			//this.Price = 2.7771f*(new Random().Next(0, 100));
 		}
 
 		public void BeginInit()
